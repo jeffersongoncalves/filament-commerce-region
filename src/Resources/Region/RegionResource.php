@@ -2,8 +2,8 @@
 
 namespace JeffersonGoncalves\FilamentCommerce\Region\Resources\Region;
 
-use Filament\Forms\Form;
 use Filament\Resources\Resource;
+use Filament\Schemas\Schema;
 use Filament\Tables\Table;
 use JeffersonGoncalves\Commerce\Region\Models\Region;
 use JeffersonGoncalves\FilamentCommerce\Region\CommerceRegionPlugin;
@@ -26,9 +26,9 @@ class RegionResource extends Resource
         }
     }
 
-    public static function form(Form $form): Form
+    public static function form(Schema $schema): Schema
     {
-        return RegionForm::configure($form);
+        return RegionForm::configure($schema);
     }
 
     public static function table(Table $table): Table

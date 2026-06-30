@@ -2,7 +2,7 @@
 
 namespace JeffersonGoncalves\FilamentCommerce\Region\Resources\Region\Tables;
 
-use Filament\Tables\Actions;
+use Filament\Actions;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
@@ -18,11 +18,11 @@ class RegionTable
                 TextColumn::make('currency_code')
                     ->toggleable(),
             ])
-            ->actions([
+            ->recordActions([
                 Actions\EditAction::make(),
                 Actions\DeleteAction::make(),
             ])
-            ->bulkActions([
+            ->toolbarActions([
                 Actions\BulkActionGroup::make([
                     Actions\DeleteBulkAction::make(),
                 ]),
